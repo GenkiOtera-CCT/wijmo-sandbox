@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <p>たとえば、以下のグリッドでは、「国」列を最後または最初の位置にドラッグすることはできません。</p>
+    <!-- the grid -->
+    <wj-flex-grid #flex [(itemsSource)]="data" (initialized)="flexInitialized(flex)">
+        <wj-flex-grid-column binding="id" header="ID" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="country" header="国"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="downloads" header="DL数" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="sales" header="売上" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="expenses" header="費用" [width]="80"></wj-flex-grid-column>
+    </wj-flex-grid>
+</div>
