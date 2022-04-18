@@ -13,6 +13,7 @@ export class TreeComponent implements AfterViewInit {
 
   family: any;
   workers: any;
+  checked: boolean = false;
 
   constructor() {
     this.family = this.getFamilies();
