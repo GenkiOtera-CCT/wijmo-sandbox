@@ -1,0 +1,27 @@
+<h1>GridSelection</h1>
+<a href="https://demo.grapecity.com/wijmo/demos/Grid/Selection/Overview/angular" target="_blank">参考ページ</a>
+<div class="container-fluid">
+    <label>
+        選択モード <span id="selectionMode"></span>
+        <wj-combo-box #selectionMode [itemsSource]="comboBoxData" [text]="'セル範囲'"
+        (textChanged)="onTextChanged()"></wj-combo-box>
+    </label>
+
+    <wj-flex-grid #flexGrid [alternatingRowStep]="0" [itemsSource]="data" (initialized)="initializeGrid()"
+        (selectionChanged)="onSelectionChanged()">
+        <wj-flex-grid-column binding="country" header="国"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="downloads" header="DL数" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="sales" header="売上" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="expenses" header="費用" [width]="80"></wj-flex-grid-column>
+    </wj-flex-grid>
+    <p>
+        現在の選択範囲: <span id="currSel">{{currentSelection}}</span>.
+    </p>
+    <div>
+        <button class="btn btn-default" (click)="onSelectClick()">
+            最初の4つのセルを選択
+        </button> <button class="btn btn-default" (click)="onListSelectClick()">
+            0、2、4の行を選択
+        </button>
+    </div>
+</div>
