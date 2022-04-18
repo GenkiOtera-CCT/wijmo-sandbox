@@ -1,0 +1,26 @@
+<h1>TreeGrid</h1>
+<a href="https://demo.grapecity.com/wijmo/demos/Grid/TreeGrid/ChildItems/angular" target="_blank">参考ページ</a>
+<div class="container-fluid">
+    <label for="asTree">ツリーとして表示: </label>
+    <input id="asTree" type="checkbox" [checked]="checked" (click)="onAsTreeClick($event)">
+    <wj-flex-grid #familyGrid
+        [itemsSource]="family"
+        [headersVisibility]="'None'"
+        [autoGenerateColumns]="false"
+        [childItemsPath]="'children'">
+        <wj-flex-grid-column [binding]="'name'" [header]="'名前'" [width]="'*'"></wj-flex-grid-column>
+    </wj-flex-grid>
+    
+    <p>また、各レベルに異なる種類の子項目のプロパティが設定されている、<em>不均一な</em>階層もあります。</p>
+    <p>たとえば、以下のグリッドは'worker'オブジェクトのコレクションに連結されており、'worker'には'checks'リストが含まれ、'checks'には'earnings'リストが含まれます。</p>
+
+    <wj-flex-grid #workersGrid 
+        [itemsSource]="workers"
+        [headersVisibility]="'Column'"
+        [childItemsPath]="['checks','earnings']"
+        [autoGenerateColumns]=false>
+        <wj-flex-grid-column [binding]="'name'" [header]="'名前'"></wj-flex-grid-column>
+        <wj-flex-grid-column [binding]="'hours'" header="勤務時間" [dataType]="'Number'" [allowSorting]="false"></wj-flex-grid-column>
+        <wj-flex-grid-column [binding]="'rate'" header="時給" [dataType]="'Number'" [allowSorting]="false"></wj-flex-grid-column>
+    </wj-flex-grid>
+</div>

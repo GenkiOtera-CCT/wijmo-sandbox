@@ -1,0 +1,14 @@
+<h1>LimitedColumn</h1>
+<a href="https://demo.grapecity.com/wijmo/demos/Grid/Events/Reordering/angular" target="_blank">参考ページ</a>
+<div class="container-fluid">
+    <p>たとえば、以下のグリッドでは、「国」列を最後または最初の位置にドラッグすることはできません。</p>
+    <p>※「国」列が最初か最後から2番目に位置し、最初か最後の列をずらすを移動することができる</p>
+    <!-- the grid -->
+    <wj-flex-grid #flex [(itemsSource)]="data" (initialized)="flexInitialized(flex)">
+        <wj-flex-grid-column binding="id" header="ID" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="country" header="国"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="downloads" header="DL数" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="sales" header="売上" [width]="80"></wj-flex-grid-column>
+        <wj-flex-grid-column binding="expenses" header="費用" [width]="80"></wj-flex-grid-column>
+    </wj-flex-grid>
+</div>
