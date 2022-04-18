@@ -11,13 +11,15 @@ import '@grapecity/wijmo.cultures/wijmo.culture.ja';
 import { LimColumnComponent } from './components/lim-column/lim-column.component';
 import { DragRowComponent } from './components/drag-row/drag-row.component';
 import { SelectGridComponent } from './components/select-grid/select-grid.component';
+import { TreeComponent } from './components/tree/tree.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LimColumnComponent,
     DragRowComponent,
-    SelectGridComponent
+    SelectGridComponent,
+    TreeComponent
   ],
   imports: [
     BrowserModule,
