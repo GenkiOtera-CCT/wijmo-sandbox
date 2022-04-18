@@ -1,0 +1,16 @@
+<h1>DraggableRow</h1>
+<a href="https://demo.grapecity.com/wijmo/demos/Grid/Rows/Reordering/angular" target="_blank">参考ページ</a>
+<div class="container-fluid">
+    <wj-flex-grid #flex [itemsSource]="data" [selectionMode]="'ListBox'"
+        [alternatingRowStep]="0" [allowSorting]="false" [allowDragging]="'Both'"
+        (draggingRow)="onDraggingRow(flex, $event)" (draggedRow)="onDraggedRow(flex, $event)">
+        <wj-flex-grid-column [header]="'ID'" [binding]="'id'"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'国'" [binding]="'country'"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'DL数'" [binding]="'downloads'"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'売上'" [binding]="'sales'"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'費用'" [binding]="'expenses'"></wj-flex-grid-column>
+    </wj-flex-grid>
+    <button (click)="showCurrentItem(flex)" class="btn btn-default">
+        現在のアイテムを表示する
+    </button>
+</div>

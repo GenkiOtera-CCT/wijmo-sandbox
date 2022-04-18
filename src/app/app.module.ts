@@ -7,11 +7,13 @@ import { WjGridModule } from '@grapecity/wijmo.angular2.grid'
 import '@grapecity/wijmo.cultures/wijmo.culture.ja';
 
 import { LimColumnComponent } from './components/lim-column/lim-column.component';
+import { DragRowComponent } from './components/drag-row/drag-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LimColumnComponent
+    LimColumnComponent,
+    DragRowComponent
   ],
   imports: [
     BrowserModule,
