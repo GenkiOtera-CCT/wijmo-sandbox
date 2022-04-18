@@ -1,12 +1,5 @@
-import 'bootstrap.css';
-import '@grapecity/wijmo.styles/wijmo.scss';
-import './styles.scss';
-
-import { Component, enableProdMode, NgModule } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { BrowserModule } from '@angular/platform-browser';
-import * as wjcGrid from '@grapecity/wijmo.grid';
-import { WjGridModule } from '@grapecity/wijmo.angular2.grid';
+import { Component } from '@angular/core';
+import { CellRangeEventArgs, FlexGrid } from '@grapecity/wijmo.grid';
 
 @Component({
   selector: 'app-lim-column',
@@ -22,17 +15,14 @@ export class LimColumnComponent {
     this.data = this._getData();
   }
 
-  flexInitialized(flexgrid: wjcGrid.FlexGrid) {
+  flexInitialized(flexgrid: FlexGrid) {
     // prevent 'country' column from being dragged to index 0
-    flexgrid.draggingColumn.addHandler((s: wjcGrid.FlexGrid, e: wjcGrid.CellRangeEventArgs) => {
+    flexgrid.draggingColumn.addHandler((s: FlexGrid, e: CellRangeEventArgs) => {
       this._theColumn = s.columns[e.col].binding;
     });
-    flexgrid.draggingColumnOver.addHandler((s: wjcGrid.FlexGrid, e: wjcGrid.CellRangeEventArgs) => {
-      if (this._theColumn == 'country') {
-        if (e.col == 0 || e.col == s.columns.length - 1) {
-            e.cancel = true;
-        }
-      }
+    flexgrid.draggingColumnOver.addHandler((s: FlexGrid, e: CellRangeEventArgs) => {
+      if (this._theColumn == 'country')
+        e.cancel = (e.col == 0 || e.col == s.columns.length - 1) ? true : false;
     });
   }
 

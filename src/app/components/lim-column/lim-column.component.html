@@ -1,5 +1,7 @@
+<h1>LimitedColumn</h1>
 <div class="container-fluid">
     <p>たとえば、以下のグリッドでは、「国」列を最後または最初の位置にドラッグすることはできません。</p>
+    <p>※「国」列が最初か最後から2番目に位置し、最初か最後の列をずらすを移動することができる</p>
     <!-- the grid -->
     <wj-flex-grid #flex [(itemsSource)]="data" (initialized)="flexInitialized(flex)">
         <wj-flex-grid-column binding="id" header="ID" [width]="80"></wj-flex-grid-column>
