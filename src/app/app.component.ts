@@ -13,6 +13,9 @@ import { Component } from '@angular/core';
       <nav class='item'>
         <a routerLink="/drag-row">drag-row</a>
       </nav>
+      <nav class='item'>
+        <a routerLink="/select-grid">select-grid</a>
+      </nav>
     </div>
     <wj-flex-grid [itemsSource]="gridData">
       <wj-flex-grid-column header="ID" binding="id" [width]="60"></wj-flex-grid-column>
