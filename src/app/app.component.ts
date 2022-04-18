@@ -20,6 +20,8 @@ import { Component } from '@angular/core';
         <a routerLink="/tree">tree</a>
       </nav>
     </div>
+    <h1>Home</h1>
+    <a href="https://demo.grapecity.com/wijmo/docs/GettingStarted/Introduction" target="_blank">GettingStarted</a>
     <wj-flex-grid [itemsSource]="gridData">
       <wj-flex-grid-column header="ID" binding="id" [width]="60"></wj-flex-grid-column>
       <wj-flex-grid-column header="商品名" binding="product" [width]="200"></wj-flex-grid-column>
