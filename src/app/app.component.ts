@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
       <nav class='item'>
         <a routerLink="/lim-column">lim-column</a>
       </nav>
-      <!-- <nav class='item'>
-        <a routerLink="/hero">hero(ngrx/data)</a>
-      </nav> -->
+      <nav class='item'>
+        <a routerLink="/drag-row">drag-row</a>
+      </nav>
     </div>
     <wj-flex-grid [itemsSource]="gridData">
       <wj-flex-grid-column header="ID" binding="id" [width]="60"></wj-flex-grid-column>
