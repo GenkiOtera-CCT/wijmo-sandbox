@@ -19,6 +19,9 @@ import { Component } from '@angular/core';
       <nav class='item'>
         <a routerLink="/tree">tree</a>
       </nav>
+      <nav class='item'>
+        <a routerLink="/drag-cell">drag-cell</a>
+      </nav>
     </div>
     <h1>Home</h1>
     <a href="https://demo.grapecity.com/wijmo/docs/GettingStarted/Introduction" target="_blank">GettingStarted</a>
