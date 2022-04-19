@@ -1,0 +1,11 @@
+<h1>TreeGrid</h1>
+<a href="https://www.grapecity.com/forums/wijmo/wijmo-cell-drag-and-drop" target="_blank">参考ページ</a>
+<a href="https://stackblitz.com/edit/angular-acxr7g" target="_blank">stackblitz</a>
+
+<p>The cells can be dragged and dropped into the same column.<p>
+
+<wj-flex-grid #grid (initialized)="initGrid(grid)" [itemsSource]="source">
+    <wj-flex-grid-column header="Country" binding="country"></wj-flex-grid-column>
+    <wj-flex-grid-column header="Date" binding="date"></wj-flex-grid-column>
+    <wj-flex-grid-column header="Amount" binding="amount"></wj-flex-grid-column>
+</wj-flex-grid>

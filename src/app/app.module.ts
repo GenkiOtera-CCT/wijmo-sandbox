@@ -12,6 +12,7 @@ import { LimColumnComponent } from './components/lim-column/lim-column.component
 import { DragRowComponent } from './components/drag-row/drag-row.component';
 import { SelectGridComponent } from './components/select-grid/select-grid.component';
 import { TreeComponent } from './components/tree/tree.component';
+import { DragCellComponent } from './components/drag-cell/drag-cell.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TreeComponent } from './components/tree/tree.component';
     LimColumnComponent,
     DragRowComponent,
     SelectGridComponent,
-    TreeComponent
+    TreeComponent,
+    DragCellComponent
   ],
   imports: [
     BrowserModule,
